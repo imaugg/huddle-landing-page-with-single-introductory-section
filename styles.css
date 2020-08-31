@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+    background: url("./images/bg-desktop.svg") no-repeat #684BB1;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    padding: 64px 80px 40px 80px;
+}
+
+.cover {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.cover-logo {
+    width: 200px;
+}
+
+.cover-mockUps {
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: auto;
+}
+
+.introduction {
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.text-container {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+}
+
+.text-container-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.text-container-text {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.text-container-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #684BB1;
+    background-color: #fff;
+    border-radius: 28px;
+    width: 200px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 24px;
+}
+
+.social-media-icons {
+    align-self: end;
+    justify-self: end;
+    display: flex;
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container + .icon-container {
+    margin-left: 16px;
+}
+
+@media screen and (max-width: 830px) {
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-gap: unset;
+        padding: 40px;
+        background: url("./images/bg-mobile.svg") no-repeat #684BB1;
+        background-size: contain;
+    }
+
+    .text-container {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .text-container-title {
+        font-size: 24px;
+    }
+
+    .text-container-text {
+        font-size: 16px;
+    }
+
+    .text-container-button {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    .social-media-icons {
+        justify-self: center;
+    }
+
+    .icon-container {
+        width: 28px;
+        height: 28px;
+    }
+
+    .icon-container > img {
+        height: 13px;
+    }
+
+    .cover-logo {
+        width: 120px;
+    }
+
+    .cover-mockUps {
+        max-width: 296px;
+    }
+}
+
